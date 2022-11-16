@@ -5,7 +5,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
 
 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-
+<script>
 var xyValues = [
   {x:50, y:7},
   {x:60, y:8},
@@ -31,7 +31,7 @@ new Chart("myChart", {
   },
   options:{...}
 });
-
+</script>
 </body>
 
 </html>
