@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <body>
 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 
@@ -37,7 +37,7 @@ new Chart("myChart", {
   }
 });
 </script>
-  <a class="btn btn-primary" href = "index.php" role = "button">Home</a>
+
 </body>
 </html>
 
