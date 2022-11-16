@@ -28,6 +28,7 @@ var chart = new google.visualization.LineChart(document.getElementById('myChart'
 chart.draw(data, options);
 }
 </script>
+  <a class="btn btn-primary" href = "index.php" role = "button">Home</a>
 
 </body>
 </html>
