@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<script src="https://unpkg.com/pixi.js@7.x/dist/browser/pixi.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/browser/pixi.min.js"></script>
 <body>
 
 
