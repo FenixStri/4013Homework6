@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js"></script>
+<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 
 <body>
 
