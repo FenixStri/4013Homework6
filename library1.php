@@ -1,3 +1,4 @@
+<!DOCTYPEHTML>
 <html>
   
 <script
