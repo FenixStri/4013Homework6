@@ -20,76 +20,101 @@
 
 
 <script>
-const app = new PIXI.Application();
+const app = new PIXI.Application({ antialias: true });
 document.body.appendChild(app.view);
 
-// holder to store the aliens
-const aliens = [];
+const graphics = new PIXI.Graphics();
 
-const totalDudes = 20;
+// Rectangle
+graphics.beginFill(0xDE3249);
+graphics.drawRect(50, 50, 100, 100);
+graphics.endFill();
 
-for (let i = 0; i < totalDudes; i++) {
-    // create a new Sprite that uses the image name that we just generated as its source
-    const dude = PIXI.Sprite.from('examples/assets/eggHead.png');
+// Rectangle + line style 1
+graphics.lineStyle(2, 0xFEEB77, 1);
+graphics.beginFill(0x650A5A);
+graphics.drawRect(200, 50, 100, 100);
+graphics.endFill();
 
-    // set the anchor point so the texture is centered on the sprite
-    dude.anchor.set(0.5);
+// Rectangle + line style 2
+graphics.lineStyle(10, 0xFFBD01, 1);
+graphics.beginFill(0xC34288);
+graphics.drawRect(350, 50, 100, 100);
+graphics.endFill();
 
-    // set a random scale for the dude - no point them all being the same size!
-    dude.scale.set(0.8 + Math.random() * 0.3);
+// Rectangle 2
+graphics.lineStyle(2, 0xFFFFFF, 1);
+graphics.beginFill(0xAA4F08);
+graphics.drawRect(530, 50, 140, 100);
+graphics.endFill();
 
-    // finally lets set the dude to be at a random position..
-    dude.x = Math.random() * app.screen.width;
-    dude.y = Math.random() * app.screen.height;
+// Circle
+graphics.lineStyle(0); // draw a circle, set the lineStyle to zero so the circle doesn't have an outline
+graphics.beginFill(0xDE3249, 1);
+graphics.drawCircle(100, 250, 50);
+graphics.endFill();
 
-    dude.tint = Math.random() * 0xFFFFFF;
+// Circle + line style 1
+graphics.lineStyle(2, 0xFEEB77, 1);
+graphics.beginFill(0x650A5A, 1);
+graphics.drawCircle(250, 250, 50);
+graphics.endFill();
 
-    // create some extra properties that will control movement :
-    // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
-    dude.direction = Math.random() * Math.PI * 2;
+// Circle + line style 2
+graphics.lineStyle(10, 0xFFBD01, 1);
+graphics.beginFill(0xC34288, 1);
+graphics.drawCircle(400, 250, 50);
+graphics.endFill();
 
-    // this number will be used to modify the direction of the dude over time
-    dude.turningSpeed = Math.random() - 0.8;
+// Ellipse + line style 2
+graphics.lineStyle(2, 0xFFFFFF, 1);
+graphics.beginFill(0xAA4F08, 1);
+graphics.drawEllipse(600, 250, 80, 50);
+graphics.endFill();
 
-    // create a random speed for the dude between 2 - 4
-    dude.speed = 2 + Math.random() * 2;
+// draw a shape
+graphics.beginFill(0xFF3300);
+graphics.lineStyle(4, 0xffd900, 1);
+graphics.moveTo(50, 350);
+graphics.lineTo(250, 350);
+graphics.lineTo(100, 400);
+graphics.lineTo(50, 350);
+graphics.closePath();
+graphics.endFill();
 
-    // finally we push the dude into the aliens array so it it can be easily accessed later
-    aliens.push(dude);
+// draw a rounded rectangle
+graphics.lineStyle(2, 0xFF00FF, 1);
+graphics.beginFill(0x650A5A, 0.25);
+graphics.drawRoundedRect(50, 440, 100, 100, 16);
+graphics.endFill();
 
-    app.stage.addChild(dude);
-}
+// draw star
+graphics.lineStyle(2, 0xFFFFFF);
+graphics.beginFill(0x35CC5A, 1);
+graphics.drawStar(360, 370, 5, 50);
+graphics.endFill();
 
-// create a bounding box for the little dudes
-const dudeBoundsPadding = 100;
-const dudeBounds = new PIXI.Rectangle(-dudeBoundsPadding,
-    -dudeBoundsPadding,
-    app.screen.width + dudeBoundsPadding * 2,
-    app.screen.height + dudeBoundsPadding * 2);
+// draw star 2
+graphics.lineStyle(2, 0xFFFFFF);
+graphics.beginFill(0xFFCC5A, 1);
+graphics.drawStar(280, 510, 7, 50);
+graphics.endFill();
 
-app.ticker.add(() => {
-    // iterate through the dudes and update their position
-    for (let i = 0; i < aliens.length; i++) {
-        const dude = aliens[i];
-        dude.direction += dude.turningSpeed * 0.01;
-        dude.x += Math.sin(dude.direction) * dude.speed;
-        dude.y += Math.cos(dude.direction) * dude.speed;
-        dude.rotation = -dude.direction - Math.PI / 2;
+// draw star 3
+graphics.lineStyle(4, 0xFFFFFF);
+graphics.beginFill(0x55335A, 1);
+graphics.drawStar(470, 450, 4, 50);
+graphics.endFill();
 
-        // wrap the dudes by testing their bounds...
-        if (dude.x < dudeBounds.x) {
-            dude.x += dudeBounds.width;
-        } else if (dude.x > dudeBounds.x + dudeBounds.width) {
-            dude.x -= dudeBounds.width;
-        }
+// draw polygon
+const path = [600, 370, 700, 460, 780, 420, 730, 570, 590, 520];
 
-        if (dude.y < dudeBounds.y) {
-            dude.y += dudeBounds.height;
-        } else if (dude.y > dudeBounds.y + dudeBounds.height) {
-            dude.y -= dudeBounds.height;
-        }
-    }
-});
+graphics.lineStyle(0);
+graphics.beginFill(0x3500FA, 1);
+graphics.drawPolygon(path);
+graphics.endFill();
+
+app.stage.addChild(graphics);
 </script>
 
 </body>
