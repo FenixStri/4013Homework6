@@ -37,7 +37,7 @@ new Chart("myChart", {
   }
 });
 </script>
-
+  <a class="btn btn-primary" href = "index.php" role = "button">Home</a>
 </body>
 </html>
 
