@@ -1,8 +1,9 @@
-<?php require_once('header.php');?>
-
+<html>
+  
 <script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
+  <body>
 
 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 <script>
