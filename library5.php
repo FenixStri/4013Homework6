@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js"></script>
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.js"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.js.map"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js.map"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.mjs"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.mjs.map"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.mjs"></script>
+
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.mjs.map"></script>
+
 
 <body>
 
