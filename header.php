@@ -20,10 +20,10 @@
           <a class="nav-link" href="library1.php">Java Script Library 1 Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript2.php">Java Script 2 Page</a>
+          <a class="nav-link" href="library2.php">Java Script Library 2 Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript3.php">Java Script 3 Page</a>
+          <a class="nav-link" href="library3.php">Java Script Library 3 Page</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="javascript4.php">Java Script 4 Page</a>
