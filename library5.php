@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/browser/pixi.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js"></script>
+
 <body>
 
 
