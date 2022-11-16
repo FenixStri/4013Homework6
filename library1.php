@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-  
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
-  <body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
 <script>
 var xyValues = [
   {x:50, y:7},
@@ -27,13 +24,21 @@ new Chart("myChart", {
   data: {
     datasets: [{
       pointRadius: 4,
-      pointBackgroundColor: "rgba(0,0,255,1)",
+      pointBackgroundColor: "rgb(0,0,255)",
       data: xyValues
     }]
   },
-  options:{...}
+  options: {
+    legend: {display: false},
+    scales: {
+      xAxes: [{ticks: {min: 40, max:160}}],
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
 });
 </script>
-</body>
 
+</body>
 </html>
+
+
