@@ -26,4 +26,6 @@
   <!-- The scrollreveal helper
   <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>-->
   </body>
+	  <a class="btn btn-primary" href = "index.php" role = "button">Home</a>
+
 </html>
